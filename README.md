@@ -10,13 +10,12 @@ The purpose of the extension is to open caniuse.com and show the compatibility t
 - Position the cursor
 - The properties are rendered in the preview
 
-![Navigation](images/preview.gif)
+![Navigation](images/can-i-use-preview.png)
 
 # How it works
 
 - The extension implements and registers a [`TextDocumentContentProvider`](http://code.visualstudio.com/docs/extensionAPI/vscode-api#TextDocumentContentProvider) for a particular URI scheme.
-- The content provider creates a HTML document that contains the declaration block of the selected CSS rule in the active editor.
-- The generated HTML document contains a link that invokes a contributed command to highlight the CSS rule in the source editor
+- The content provider creates a HTML document that contains the selected Text in the active editor.
 - The generated HTML document is then opened in an editor in the 2nd Column using the command `vscode.previewHtml`.
 
 # How to run locally
