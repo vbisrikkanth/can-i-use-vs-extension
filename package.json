@@ -1,0 +1,57 @@
+{
+	"name": "caniuse-preview-extension",
+	"displayName": "Can I Use Extension",
+	"description": "A sample illustrating the use of TextContentProviders and the `vscode.previewHtml` command, introduce in 0.10.7",
+	"version": "0.0.10",
+	"publisher": "eg2",
+	"categories": [
+		"Other"
+	],
+	"engines": {
+		"vscode": "^0.10.7"
+	},
+	"activationEvents": [
+		"onCommand:extension.caniusePreview",
+		"onLanguage:css",
+        "onLanguage:sass",
+        "onLanguage:less",
+		"onLanguage:html",
+		"onLanguage:js",
+		"onLanguage:ts"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.caniusePreview",
+				"title": "Open Can I Use Preview"
+			}
+		],
+		"keybindings": [
+            {
+                "command": "extension.caniusePreview",
+                "key": "alt+i",
+                "when": "editorHasSelection"
+            }
+        ],
+		"menus": {
+			"editor/title": [
+				{
+					"command": "extension.caniusePreview",
+					"when": "resourceLangId == js ||resourceLangId == css || resourceLangId == html || resourceLangId == sass"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"tslint": "tslint -c tslint.json src/extension.ts"
+	},
+	"devDependencies": {
+		"typescript": "^2.1.4",
+		"vscode": "^1.0.0",
+		"@types/node": "*"
+	}
+}
