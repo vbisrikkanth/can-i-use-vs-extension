@@ -4,12 +4,11 @@ This is an sample extension that illustrates the use of virtual documents or `Te
 
 It is not intended as a product quality extension.
 
-The purpose of the extension is to show a preview of the properties in the declaration block of a CSS rule. To play with the extension:
-- Open a CSS file
-- Use `Show CSS Properties Preview`
-- Position the cursor inside the declaration block of the rule
+The purpose of the extension is to open caniuse.com and show the compatibility table in context . To play with the extension:
+- Open a CSS/JS/SASS file
+- Use `Can I Use Preview`
+- Position the cursor
 - The properties are rendered in the preview
-- Edit the properties and the preview is updated
 
 ![Navigation](images/preview.gif)
 
